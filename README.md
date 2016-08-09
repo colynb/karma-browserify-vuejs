@@ -10,7 +10,7 @@ Run Karma Test Runner (with Jasmine and Browserify) - in watch mode
 
 Run Karma Test Runner (with Jasmine and Browserify) - for CI single runs
 ```
-> npm test:ci
+> npm run test:ci
 ```
 
 Build (without watching)
