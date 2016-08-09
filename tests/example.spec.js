@@ -8,17 +8,16 @@
  */
 
 import App from '../resources/assets/js/app.js'
-import merge from 'merge'
 
 function setUpHTMLFixture () {
   jasmine.getFixtures().set(require('./fixture.html'))
 }
 
 function getApp (state, opts = {}) {
-  let options = merge({}, {
+  let options = Object.assign({}, {
     el: '#vue-app'
   }, opts)
-  let initialState = merge({}, {
+  let initialState = Object.assign({}, {
     message: 'Hello'
   }, state || {})
   return App.init(options, initialState)
