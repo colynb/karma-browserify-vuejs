@@ -1,5 +1,4 @@
 import Vue from 'vue'
-import merge from 'merge'
 
 const DEFAULT_OPTIONS = {
   el: '#app'
@@ -7,10 +6,10 @@ const DEFAULT_OPTIONS = {
 
 const App = {
   init: function (options, initialState) {
-    options = merge({}, DEFAULT_OPTIONS, options)
+    options = Object.assign({}, DEFAULT_OPTIONS, options)
     return new Vue({
       el: options.el,
-      data: merge({}, initialState || {})
+      data: Object.assign({}, initialState || {})
     })
   }
 }
